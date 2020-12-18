@@ -1,0 +1,26 @@
+/*Main design*/
+
+/* Nav styling */
+nav {
+    background-color: black;
+}
+
+nav li{
+    list-style-type: none;
+    font-size: larger;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover{
+    color: blue;
+}
+
+
+/*Home*/
+/*About*/
+/*Contact*/
+/*Project*/

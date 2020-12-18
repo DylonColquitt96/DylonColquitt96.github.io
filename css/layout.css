@@ -1,0 +1,23 @@
+/* Nav layout*/
+nav{
+    width: 100%;
+        
+}
+
+nav ul{
+    margin: 0 20px;
+    display: flex;
+    
+}
+
+nav li{
+    display: inline;
+    padding: 25px 20px 12px 20px;
+}
+
+
+
+/*Home*/
+/*About*/
+/*Contact*/
+/*Project*/
