@@ -15,12 +15,50 @@ nav li a{
     color: white;
 }
 
-nav li a:hover{
+nav a:hover:active{
     color: blue;
 }
 
 
+
+
 /*Home*/
+
+.container-home{
+    background-image:url(/Images/bl-Tech_Background1Update.png);
+    color: white;
+    font-size: x-large;
+}
+
+.highlight{
+    color: rgb(2, 1, 5);
+}
 /*About*/
+
 /*Contact*/
 /*Project*/
+#Projects {
+    background-color: rgb(241, 241, 237);
+}
+
+/* Footer*/
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+
+footer button {
+    font-size: 35px;
+    background-color: black;
+    border-style: none;
+}
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: blue;
+}

@@ -1,13 +1,19 @@
-/* Nav layout*/
-nav{
-    width: 100%;
-        
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Nav layout*/
+nav{
+    position: sticky;
+    top: 0;
+}
 nav ul{
     margin: 0 20px;
     display: flex;
-    
+    width: 100%;
 }
 
 nav li{
@@ -18,6 +24,90 @@ nav li{
 
 
 /*Home*/
+.container-home {
+    height: 700px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*About*/
+
+.container-about {
+    height: 500px;
+}
+
+.container-about h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.container-about h3{
+    display: flex;
+    align-content: flex-end;
+}
+.container-about  p{
+    float: right;
+    display: flex;
+    justify-content: end;  
+}
+
+div {
+    display: inline-block;
+    
+}
+
+#profilePic {
+    padding-left: 10rem;
+}
+
 /*Contact*/
+.container-contact{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact h2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+.container-contact button{
+    display: flex;
+
+}
 /*Project*/
+.container-project {
+    height: 700px;
+}
+
+.container-project h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+/* Footer*/
+footer{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer button{
+    padding: 5px 25px;
+}
+footer p{
+    align-content: flex-end;
+}

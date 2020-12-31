@@ -4,43 +4,60 @@
     <title>Dylon Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 </head>
 <body>
+
+      <!-- Navigation section-->
+
 <nav>
     <ul>
         <li><a href="#Home">Home</a></li>    
-        <li><a href="#About">About</a></li> 
-        <li><a href="#Contact">Contact</a></li>       
+        <li><a href="#About">About</a></li>     
         <li><a href="#Projects">Projects</a></li>
     </ul>
 </nav>
-    <h1>Welcome! I'm Dylon Colquitt, a full-stack developer.</h1>
-    <section>
-        <h2 id="Home">About</h2>
+
+    <!--Home page-->
+
+    <section  class= "container-home" id="Home" >
+        
+        <h1>Welcome. I'm <span class="highlight"> Dylon Colquitt</span>,<br>a full-stack software developer.<br></h1>
+    </section>
+
+    <!-- About section-->
+
+    <section class = "container-about" id="About">
+        <h2>About</h2>
 
         <!--Image should go here-->
 
         <!--Bio-->
-        <h3>Hello, it is I! The one you seek!</h3>
+        <div id="profilePic">
+            <img src='https://placehold.it/300' alt=''/>
+        </div>
+
         <p> 
-            I'm an Ohio based Jr. software developer who recently completed my courses at We Can Code It.
+            <br>I'm an Ohio based Jr. software developer who recently completed my courses at We Can Code It.<br>
+            <br> My passion is in Java but I can tango with these skill sets as well:<br>
+            <br>Spring, JavaScript, HTML, CSS, AJAX, JSON, Restful APIs, and Responsive Design / Mobile.<br>
+            <br>If I caught your interest and you're looking to work with me, you can find reach me at my contact info down below!<br>
+            <br>If I still haven't caught your attention, just wait, there's more. Check out my projects and let me know what you think.<br>
         </p>
-        <p> 
-            My passion is in Java but I can tango with these skill sets as well: 
-            Spring, JavaScript, HTML, CSS, AJAX, JSON, Restful APIs, and Responsive Design / Mobile.
-        </p>
-        <p>
-            If I caught your interest and you're looking to work with me, you can find reach me at my contact info down below!
-            If I still haven't caught your attention, just wait, there's more. Check out my projects and let me know what you think.
-        </p>
-        <h2 id="Contact">Contact</h2>
-        <p>Email: dylon_colquitt@hotmail.com</p>
-        <p>LinkedIn</p>
-        <p>GitHub</p>
-        <!--Skills-->
     </section>
-    <section>
-        <h2 id="Projects">Projects</h2>
+
+    <!-- Contact section-->
+
+    <section class = "container-contact" id="Contact">
+          <h2>Contact</h2>
+          <button><a href="https://www.linkedin.com/in/dylon-colquitt/"><i class="fab fa-linkedin"> LinkedIn</i></a></button>
+          <button><a href="https://github.com/DylonColquitt96"><i class="fab fa-github">GitHub</i></a></button>    
+          <button><a href="dylon_colquitt@hotmail.com">Email: dylon_colquitt@hotmail.com<i class="far fa-envelope"></i></a></button>
+    </section>
+    <!--Project Section-->
+
+    <section class= "container-project" id="Projects">
+        <h2 >Projects</h2>
         <article>
 
         </article>
@@ -49,5 +66,10 @@
         </article>
     </section>
 
-<footer> © Dylon Colquitt</footer>
+<footer> 
+    <button><a href="https://www.linkedin.com/in/dylon-colquitt/"><i class="fab fa-linkedin"></i></a></button>
+    <button><a href="https://github.com/DylonColquitt96"><i class="fab fa-github"></i></a></button>    
+    <button><a href="dylon_colquitt@hotmail.com"><i class="far fa-envelope"></i></a></button>
+    <p>© Dylon Colquitt</p>
+</footer>
 </body>
