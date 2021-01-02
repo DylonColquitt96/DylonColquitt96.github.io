@@ -15,14 +15,12 @@ nav li a{
     color: white;
 }
 
-nav a:hover:active{
+nav a:hover{
     color: blue;
 }
 
-
-
-
 /*Home*/
+
 
 .container-home{
     background-image:url(/Images/bl-Tech_Background1Update.png);
@@ -33,9 +31,15 @@ nav a:hover:active{
 .highlight{
     color: rgb(2, 1, 5);
 }
+
+
 /*About*/
 
+
+
 /*Contact*/
+
+
 
 .container-contact button {
     font-size: 20px;
@@ -48,7 +52,9 @@ nav a:hover:active{
     background-color: rgb(241, 241, 237);
 }
 
+
 /* Footer*/
+
 
 footer{
     background-color: black;
