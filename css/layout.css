@@ -24,6 +24,9 @@ nav li{
 
 
 /*Home*/
+
+
+
 .container-home {
     height: 700px;
     width: 100%;
@@ -36,10 +39,15 @@ nav li{
     justify-content: center;
     align-items: center;
 }
+
+
+
 /*About*/
 
+
+
 .container-about {
-    height: 500px;
+    height: 450px;
 }
 
 .container-about h2{
@@ -68,24 +76,41 @@ div {
     padding-left: 10rem;
 }
 
+
+
 /*Contact*/
+
+
 .container-contact{
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container-contact h2{
     display: flex;
     justify-content: center;
-    padding-bottom: 3rem;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    
 }
 .container-contact button{
     display: flex;
+    justify-content: center;
+    padding-right:25px;
+    
 
 }
+
+
+
 /*Project*/
+
+
+
 .container-project {
     height: 700px;
 }
@@ -97,7 +122,13 @@ div {
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
+
+
+
 /* Footer*/
+
+
+
 footer{
     height: 5rem;
     display: flex;

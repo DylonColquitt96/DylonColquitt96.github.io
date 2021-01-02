@@ -36,6 +36,13 @@ nav a:hover:active{
 /*About*/
 
 /*Contact*/
+
+.container-contact button {
+    font-size: 20px;
+    border-style: none;
+    background-color: white;
+}
+
 /*Project*/
 #Projects {
     background-color: rgb(241, 241, 237);
