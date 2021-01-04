@@ -96,6 +96,11 @@ div {
     
 }
 
+.container-contact a{
+    color: black;
+}
+
+
 .container-contact h2{
     display: flex;
     justify-content: center;
@@ -105,7 +110,6 @@ div {
     
 }
 .container-contact button{
-    
     margin: 0 20px;
 }
 
