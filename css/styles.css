@@ -16,20 +16,20 @@ nav li a{
 }
 
 nav a:hover{
-    color: blue;
+    color: #122ff5;
 }
 
 /*Home*/
 
 
 .container-home{
-    background-image:url(/Images/bl-Tech_Background1Update.png);
+    background-image:url(/Images/Portfolio\ Main\ Background.png);
     color: white;
     font-size: x-large;
 }
 
 .highlight{
-    color: rgb(2, 1, 5);
+    color: #122ff5;
 }
 
 
@@ -73,5 +73,5 @@ footer a{
 }
 
 footer a:hover{
-    color: blue;
+    color: #122ff5;
 }
