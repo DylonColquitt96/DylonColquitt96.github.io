@@ -1,88 +1,112 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>Dylon Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/layout.css"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dylon Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/layout.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    </head>
+    <body>
 
-      <!-- Navigation section-->
+            <!-- Navigation section-->
 
-<nav>
-    <ul>
-        <li><a href="#Home">Home</a></li>    
-        <li><a href="#About">About</a></li>     
-        <li><a href="#Projects">Projects</a></li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <div class="nav-line">
+                    <div class="nav-circle"></div>
+                </div> 
+                <li>
+                    <a href="#About">About</a>
+                </li>
+                <li>
+                    <a href="#Skills">Skills</a>
+                </li>     
+                <li>
+                    <a href="#Projects">Projects</a>
+                </li>
+                <li>
+                    <a a href="mailto:dylon_colquitt@hotmail.com">Contact</a>
+                </li>
+                <li>
+                    <a href="https://docs.google.com/document/d/10oljrZytfPuco84XOo4kTrhOH4xv3KUF8lf49_dIS2c/edit?usp=sharing" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
 
 
 
-    <!--Home page-->
+            <!--Home page-->
 
+            <section class="container">
+                <div class="side-line-long">
+                <div class="side-circle"></div>
+                </div>
+                <div class="side-line-short"></div>
+                <div class="outer-square"></div>
+                <div class="mid-square"></div>
+                <div class="white-line"></div>
+                <div class="inner-square"></div>
+                <div class="inner-inner-square">
+                <p>Dylon Colquitt</p>
+                <p>Full-Stack Software Engineer</p>
+                </div>
+                <div class="bottom-line-long">
+                <div class="bottom-circle"></div>
+                </div>
+                <div class="bottom-line-short"></div>
+            </section>
 
+            <!-- About section-->
 
-    <section  class= "container-home" id="Home" >
-        <h1>Welcome. I'm <span class="highlight"> Dylon Colquitt</span>,<br>a full-stack software developer.<br></h1>
-    </section>
+            <section class = "container-about" id="About">
+                <h3>About</h3>
 
-    <!-- About section-->
+                <!--Image should go here-->
 
-    <section class = "container-about" id="About">
-        <h2>About</h2>
+                <!--Bio-->
+                <div class="flex-container">
+                    <div class="column-left">
+                        <img src="/Images/ProfilePicture.jpg">
+                    </div>
+                    <div class="column-right">
+                        <p> 
+                            <br>I'm an Ohio based Jr. software developer who recently completed my courses at We Can Code It.<br>
+                            <br> My passion is in Java but I can tango with these skill sets as well:<br>
+                            <br>Spring, JavaScript, HTML, CSS, AJAX, JSON, Restful APIs, and Responsive Design / Mobile.<br>
+                            <br>If I caught your interest and you're looking to work with me, you can find reach me at my contact info down below!<br>
+                            <br>If I still haven't caught your attention, just wait, there's more. Check out my projects and let me know what you think.<br>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <!--Image should go here-->
+            <!--Project Section-->
 
-        <!--Bio-->
-        <div id="profilePic">
-            <img src="/Images/ProfilePicture.jpg">
-        </div>
-        
-        <p> 
-            <br>I'm an Ohio based Jr. software developer who recently completed my courses at We Can Code It.<br>
-            <br> My passion is in Java but I can tango with these skill sets as well:<br>
-            <br>Spring, JavaScript, HTML, CSS, AJAX, JSON, Restful APIs, and Responsive Design / Mobile.<br>
-            <br>If I caught your interest and you're looking to work with me, you can find reach me at my contact info down below!<br>
-            <br>If I still haven't caught your attention, just wait, there's more. Check out my projects and let me know what you think.<br>
-        </p>
-        
-    </section>
+            <section class= "container-project" id="Projects">
+                <h3>Projects</h3>
 
-    <!-- Contact section-->
+                <article class="projectImage">
+                <a href="https://github.com/DylonColquitt96/virtual-pet-Dylon-Colquitt"><img src="/Images/VirtualPetApplication.PNG"></a>   
+                <main>
+                    <p>Virtual Pet Project</p>
+                </main>
+                </article>
 
-    <section class = "container-contact">
-          <h2>Contact</h2>
-          <button><a href="https://www.linkedin.com/in/dylon-colquitt/"><i class="fab fa-linkedin"> LinkedIn</i></a></button>
-          <button><a href="https://github.com/DylonColquitt96"><i class="fab fa-github">GitHub</i></a></button>    
-          <button><a href="mailto:dylon_colquitt@hotmail.com"><i class="far fa-envelope"></i>Email: dylon_colquitt@hotmail.com</a></button>
-    </section>
-    <!--Project Section-->
+                <article class="projectImage">
+                    <a href="https://github.com/DylonColquitt96/VirtualPetShelter-Module-1"><img src="/Images/VirtualPetShelter.PNG"></a>
+                    <main>
+                        <p>Virtual Pet Shelter</p>
+                    </main>
+                </article>
 
-    <section class= "container-project" id="Projects">
-        <h2 >Projects</h2>
+            </section>
 
-        <article class="projectImage">
-         <a href="https://github.com/DylonColquitt96/virtual-pet-Dylon-Colquitt"><img src="/Images/VirtualPetApplication.PNG"></a>   
-         <main>
-             <p>Virtual Pet Project</p>
-         </main>
-        </article>
-
-        <article class="projectImage">
-            <a href="https://github.com/DylonColquitt96/VirtualPetShelter-Module-1"><img src="/Images/VirtualPetShelter.PNG"></a>
-            <main>
-                <p>Virtual Pet Shelter</p>
-            </main>
-        </article>
-
-    </section>
-
-<footer> 
-    <button><a href="https://www.linkedin.com/in/dylon-colquitt/"><i class="fab fa-linkedin"></i></a></button>
-    <button><a href="https://github.com/DylonColquitt96"><i class="fab fa-github"></i></a></button>    
-    <button><a href="mailto:dylon_colquitt@hotmail.com"><i class="far fa-envelope"></i></a></button>
-    <p>© Dylon Colquitt</p>
-</footer>
-</body>
+        <footer > 
+            <button><a href="https://www.linkedin.com/in/dylon-colquitt/"><i class="fab fa-linkedin"></i></a></button>
+            <button><a href="https://github.com/DylonColquitt96"><i class="fab fa-github"></i></a></button>    
+            <button><a href="mailto:dylon_colquitt@hotmail.com"><i class="far fa-envelope"></i></a></button>
+            <p>© Dylon Colquitt</p>
+        </footer>
+        <script src="./main.js"></script>
+    </body>
+</html>

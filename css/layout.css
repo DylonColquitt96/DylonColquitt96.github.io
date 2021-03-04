@@ -1,82 +1,226 @@
-
-*{
-    box-sizing: border-box;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-img{
-    max-width:100%;
-    max-height:100%
-    }
 
+html{
+    scroll-behavior: smooth;;
+}
+
+section:not(:first-of-type){
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    padding: 30vh; 
+}
+
+h3 {
+    text-align: center;
+    font-size: 40pt;
+}
+
+section:not(:first-of-type):not(:last-of-type)::after { /* we don't want the first or the last section, we are targeting every one in between
+    ::after is like a fake div that you can place after the element (the section tags)
+    there is also a ::before pseudo-selector as well */
+content: ""; /* content is ALWAYS ALWAYS required for ::after and ::before, if not needed, just left empty with double quotes*/
+border: 30vh solid transparent; /* this is how we create the triangle, we set a border thickness (15vh) and make all borders transparent
+by default, this imaginary div has a 0 height and 0 width, so you can't see the div, only the border
+but the border for now is transparent so you can't see anything yet */
+position: absolute; /* next few lines just position the imaginary div to the bottom center of the section */
+left: 50%;
+top: 100%;
+transform: translate(-50%, 0);
+z-index: 100; /* keep it above the next section */
+}
 
 /* Nav layout*/
 
+nav { 
+    position: absolute;
+    width: 38vw;
+    right: 0; /* this aligns the nav to the right instead of the left */
+    z-index: 50; /* we want the nav above everything else, so when the squares rotate, it doesn't cover the nav */
+    font-size: 1.5vw; /* dynamic font size */
+    margin: 20px;
+  }
 
-nav{
-    position: sticky;
-    top: 0;
-}
-nav ul{
-    margin: 0 20px;
+  ul { 
     display: flex;
-    width: cover;
-}
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* these codes just keep our boxes looking nice and aligned */
+    list-style-type: none; /* remove bullets from list (our nav is a list) */
+  }
 
-nav li{
-    display: inline;
-    padding: 25px 20px 12px 20px;
-}
+  a { /* Used for both navs */
+    position: relative; /* needed for z-index */
+    text-decoration: none; /* removes default underline that links have */
+    z-index: 80;
+  }
+  li { 
+    position: relative; /* this is required because we are using a position: absolute on the child element */
+    width: 25%; /* 25% of nav, there are 4 nav links, this sets each link to 25% of the nav width */
+    text-align: center;
+  }
 
+  nav .nav-line { 
+    position: absolute;
+    left: 50%;
+    bottom: -1vh;
+    width: 40vw;
+  }
+  
+
+  nav .nav-circle { /* This is only for Nav2 */
+    position: absolute;
+    left: -20px;
+    top: -7px;
+    width: 14px;
+    height: 14px;
+  }
 
 
 /*Home*/
 
-
-
-.container-home {
-    height: 55rem;
-    width: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.container-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1{
-    padding-left: 40px;
+.container {
+    position: inherit;
+    height: 100vh;
+    width: 100vw;
 }
 
 
+.side-line-long{
+    position: absolute;
+    left: 3vw;
+    top: 5vh;
+    width: 40vw;
+
+}
+
+.side-line-short{
+    position:absolute;
+    left:13vw;
+    top: 0;
+    width: 20vw;
+}
+
+.side-circle{
+    position: absolute;
+    left: -70px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.outer-square{
+    position: absolute;
+    z-index: 5;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vw;
+}
+
+.mid-square{
+    position: absolute;
+    z-index: 10;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 40vw;
+}
+
+.inner-square {
+    position: absolute;
+    z-index: 20;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 30vw;
+}
+
+.rotate{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.white-line{
+    position: absolute;
+    z-index: 15;
+    top: 50vh;
+    transform: translateY(-50%);
+    height: 3vh;
+    width: 100vw;
+}
+
+
+.inner-inner-square {
+    position: absolute;
+    pointer-events: none;
+    z-index: 25;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container p {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+
+.bottom-line-long {
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
+    width: 40vw;
+    border-top: 1px solid white;
+    transform: rotate(-45deg);
+}
+
+.bottom-line-short {
+    position: absolute;
+    right: 13vw;
+    bottom: 0;
+    width: 20vw;
+    border-top: 1px solid white;
+    transform: rotate(-45deg);
+    
+}
+
+.bottom-circle {
+    position: absolute;
+    right: -70px;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
 
 /*About*/
 
 
 
 .container-about {
-    height: 40rem;
+    z-index: 4;
+   
 }
 
-.container-about h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-}
-.container-about h3{
-    display: flex;
-    align-content: flex-end;
-}
+
+
+
 .container-about  p{
     float: right;
     display: flex;
-    justify-content: end;  
+    justify-content: center;
 }
 
 div {
@@ -84,40 +228,26 @@ div {
     
 }
 
-#profilePic {
-    height: 20rem;
-    width: 30rem;
-    padding-left: 15rem;
-}
-
-
-
-/*Contact*/
-
-
-.container-contact{
-    height: 20rem;
+.flex-container{
     display: flex;
-    justify-content: center;
-    text-align: center;
-    
+    flex-direction: row;
 }
 
-.container-contact a{
-    color: black;
+.column-left{
+    width: 50%;
+    height: 100vh;
+    margin: 5px;
+    padding: 5px;
 }
 
-
-.container-contact h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 10rem;
-    
+.column-right{
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
 }
-.container-contact button{
-    margin: 0 20px;
+
+img{
+    height: 65vh;
 }
 
 
@@ -127,21 +257,14 @@ div {
 
 
 .container-project {
-    height: 60rem;
-    text-align: center;
-}
 
-.container-project h2{
-    display: flex;
-    justify-content: center;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    text-align: center;
 }
 
 
 .projectImage{
-    height: 35rem;
-    width: 30rem;
+    height: 15vh;
+    width: 35vw;
 }
 
 article {
@@ -163,7 +286,9 @@ article:nth-child(3n){
 
 
 footer{
-    height: 5rem;
+    position: inherit;
+    height: 15vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
