@@ -10,11 +10,15 @@ html{
     scroll-behavior: smooth;;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 section:not(:first-of-type){
     position: relative;
     width: 100vw;
     height: 120vh;
-    padding: 30vh; 
+    padding-top: 30vh; 
 }
 
 h3 {
@@ -207,21 +211,10 @@ nav {
 
 /*About*/
 
-
-
 .container-about {
     z-index: 4;
-   
 }
 
-
-
-
-.container-about  p{
-    float: right;
-    display: flex;
-    justify-content: center;
-}
 
 div {
     display: inline-block;
@@ -229,21 +222,26 @@ div {
 }
 
 .flex-container{
+    width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .column-left{
+    display: flex;
+    justify-content: center;
     width: 50%;
-    height: 100vh;
-    margin: 5px;
-    padding: 5px;
 }
 
 .column-right{
-    width: 25%;
-    margin: 5px;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.column-right p{
+    width: 50%;
 }
 
 img{
@@ -299,4 +297,18 @@ footer button{
 }
 footer p{
     align-content: flex-end;
+}
+
+@media only screen and (max-width: 600px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-container aside{
+        width: 100%;
+    }
+
+    .container-about{
+        height: fit-content !important;
+    }
+
 }

@@ -81,11 +81,11 @@ nav a{
 /*About*/
 .container-about{
 
-    background-image: linear-gradient(to bottom right, #0f2552, #102EF4);
+    background-image: linear-gradient(to bottom , #0f2552, #102EF4);
     color: white;
 }
 .container-about::after {
-    border-top-color: #180cac!important; /* here we are coloring ONLY the top border. Imagine a div with a 0 height and width (basically
+    border-top-color: #102EF4 !important; /* here we are coloring ONLY the top border. Imagine a div with a 0 height and width (basically
                                         an invisible dot, then imagine drawing a border around that dot, there are 4 borders: top, right,
                                         bottom, left. So imagine a square with a big X in the middle. it would be 4 triangles pointing
                                         towards the center of the square. Each triangle represents a border (top, right, bottom, left).
