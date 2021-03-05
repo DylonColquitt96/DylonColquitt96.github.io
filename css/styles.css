@@ -85,6 +85,12 @@ nav a{
     background-image: linear-gradient(to bottom , #0f2552, #102EF4);
     color: white;
 }
+
+.column-right{
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
 .container-about::after {
     border-top-color: #102EF4 !important; /* here we are coloring ONLY the top border. Imagine a div with a 0 height and width (basically
                                         an invisible dot, then imagine drawing a border around that dot, there are 4 borders: top, right,
@@ -113,12 +119,18 @@ nav a{
 .container-skill main p:hover{
     font-size: 40px;
 }
+.container-skill::after{
+    border-top-color: #1060f4 !important;
+}
 
 
 /*Project*/
-#Projects {
-    background-color: rgb(241, 241, 237);
+.container-project {
+    background-image: linear-gradient(to bottom , #102EF4, #0f2552);
+    color: white;
 }
+
+
 
 
 /* Footer*/
