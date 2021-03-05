@@ -38,6 +38,7 @@ left: 50%;
 top: 100%;
 transform: translate(-50%, 0);
 z-index: 100; /* keep it above the next section */
+pointer-events: none;
 }
 
 /* Nav layout*/
@@ -248,6 +249,27 @@ img{
     height: 65vh;
 }
 
+/* Skills */
+
+.container-skill{
+    padding: 0 50px;
+}
+
+.container-skill main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 40px;
+    
+}
+
+.container-skill main p{
+    width: 25%;
+    text-align: center;
+    margin: 50px 0;
+}
+
+
 
 
 /*Project*/
@@ -255,7 +277,7 @@ img{
 
 
 .container-project {
-
+    z-index: 3;
     text-align: center;
 }
 
@@ -310,5 +332,16 @@ footer p{
     .container-about{
         height: fit-content !important;
     }
+
+    .container-skill main p{
+        font-size: 20px;
+        line-height: 25px;
+        
+    }
+    
+    .container-skill main p:hover{
+        font-size: 25px;
+    }
+    
 
 }

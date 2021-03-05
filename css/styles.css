@@ -18,6 +18,7 @@ nav a{
 
   li:hover a {  /* This is only for Nav2 */
     color: white;
+    
 }
 
 /*Home*/
@@ -92,6 +93,25 @@ nav a{
                                         We made all the borders transparent (invisible) and now we are adding color to only the top border.
                                         so if you think about the square with the X, imagine the top triangle has color and the others are
                                         invisible -- then you are left with just a single triangle point down */
+}
+
+
+/* Skills */
+
+
+.container-skill{
+    background-image: linear-gradient(to bottom , black, #1060f4);
+    color: white;
+}
+.container-skill main p{
+    font-size: 30px;
+    transition: all 0.5s ease;
+    cursor: default;
+    
+}
+
+.container-skill main p:hover{
+    font-size: 40px;
 }
 
 
