@@ -10,13 +10,13 @@ nav a{
     border-top: 1px solid white;
 }
 
-.nav-circle { /* This is only for Nav2 */
+.nav-circle { 
 
     background-color: white;
     border-radius: 50%;
   }
 
-  li:hover a {  /* This is only for Nav2 */
+  li:hover a {  
     color: white;
     
 }
@@ -125,10 +125,12 @@ nav a{
 
 
 /*Project*/
+
 .container-project {
     background-image: linear-gradient(to bottom , #102EF4, #0f2552);
     color: white;
 }
+
 
 
 

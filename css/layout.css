@@ -12,6 +12,7 @@ html{
 
 body{
     overflow-x: hidden;
+    
 }
 
 section:not(:first-of-type){
@@ -24,13 +25,14 @@ section:not(:first-of-type){
 h3 {
     text-align: center;
     font-size: 40pt;
+    padding-bottom: 3vh;
 }
 
 section:not(:first-of-type):not(:last-of-type)::after { /* we don't want the first or the last section, we are targeting every one in between
     ::after is like a fake div that you can place after the element (the section tags)
     there is also a ::before pseudo-selector as well */
 content: ""; /* content is ALWAYS ALWAYS required for ::after and ::before, if not needed, just left empty with double quotes*/
-border: 30vh solid transparent; /* this is how we create the triangle, we set a border thickness (15vh) and make all borders transparent
+border: 15vh solid transparent; /* this is how we create the triangle, we set a border thickness (15vh) and make all borders transparent
 by default, this imaginary div has a 0 height and 0 width, so you can't see the div, only the border
 but the border for now is transparent so you can't see anything yet */
 position: absolute; /* next few lines just position the imaginary div to the bottom center of the section */
@@ -46,9 +48,8 @@ pointer-events: none;
 nav { 
     position: absolute;
     width: 38vw;
-    right: 0; /* this aligns the nav to the right instead of the left */
-    z-index: 50; /* we want the nav above everything else, so when the squares rotate, it doesn't cover the nav */
-    font-size: 1.5vw; /* dynamic font size */
+    right: 0; 
+    z-index: 50; 
     margin: 20px;
   }
 
@@ -56,18 +57,17 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly; /* these codes just keep our boxes looking nice and aligned */
-    list-style-type: none; /* remove bullets from list (our nav is a list) */
+    justify-content: space-evenly; 
+    list-style-type: none; 
   }
 
-  a { /* Used for both navs */
-    position: relative; /* needed for z-index */
-    text-decoration: none; /* removes default underline that links have */
+  a { 
+    position: relative; 
+    text-decoration: none; 
     z-index: 80;
   }
   li { 
-    position: relative; /* this is required because we are using a position: absolute on the child element */
-    width: 25%; /* 25% of nav, there are 4 nav links, this sets each link to 25% of the nav width */
+    position: relative; 
     text-align: center;
   }
 
@@ -76,6 +76,7 @@ nav {
     left: 50%;
     bottom: -1vh;
     width: 40vw;
+    
   }
   
 
@@ -253,6 +254,7 @@ img{
 
 .container-skill{
     padding: 0 50px;
+    z-index: 1;
 }
 
 .container-skill main{
@@ -279,27 +281,55 @@ img{
 .container-project {
     
     text-align: center;
+    
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.project-slide{
+    display: none;
 }
 
 
-.projectImage{
-    height: 15vh;
-    width: 35vw;
-}
 
-article {
-  float: left;
-  margin-right: 2%;
-  width: 49%;
-  font-size: x-large;
-}
+  .text {
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    top: 0;
+    
+  }
 
-article:nth-child(even) {
-    margin-right: 2%;
-}
-article:nth-child(3n){
-    margin-right: 0;
-}
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+
 
 
 /* Footer*/
@@ -309,6 +339,7 @@ footer{
     position: inherit;
     height: 15vh;
     width: 100vw;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,6 +353,8 @@ footer p{
 }
 
 @media only screen and (max-width: 600px){
+
+
     .flex-container{
         flex-direction: column;
     }
