@@ -21,7 +21,7 @@ window.onload =() => {
 
     setTimeout(() => {
         columnRight.style.opacity = "1";
-    }, 3000);
+    }, 2000);
 };
 
 let running = false;
