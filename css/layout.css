@@ -71,6 +71,29 @@ nav {
     text-align: center;
   }
 
+  li:nth-last-of-type(2),
+  li:nth-last-of-type(1) {
+    transition: all 1s ease;
+  }
+  li:nth-last-of-type(2).float,
+  li:nth-last-of-type(1).float {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e2025;
+    border-radius: 50%;
+    z-index: 500;
+    font-size: 12pt;
+  }
+  li:nth-last-of-type(1).float {
+    bottom: 120px;
+  }
+
   nav .nav-line { 
     position: absolute;
     left: 50%;

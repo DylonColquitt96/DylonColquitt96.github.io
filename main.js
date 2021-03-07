@@ -6,6 +6,19 @@ const p1 = document.querySelector("p:first-child");
 const p2 = document.querySelector("p:last-child");
 const columnRight = document.querySelector(".column-right");
 
+window.addEventListener("scroll", () => {
+  let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  const email = document.querySelector("li:nth-last-of-type(2)");
+  const resume = document.querySelector("li:nth-last-of-type(1)");
+  if (scrollValue > 100) {
+    email.classList.add("float");
+    resume.classList.add("float");
+  } else  {
+    email.classList.remove("float");
+    resume.classList.remove("float");
+  }
+});
+
 window.onload =() => {
     outerSquare.classList.add("rotate");
     midSquare.classList.add("rotate");
