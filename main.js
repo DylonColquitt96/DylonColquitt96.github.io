@@ -67,26 +67,21 @@ window.addEventListener("resize", adjustFont);
 const nav = document.querySelector("nav");
 const slider = document.querySelector(".nav-line");
 
-nav.addEventListener("mousemove", (e) => {
-    let navX = nav.getBoundingClientRect().left; //This gets the position of the left side of our nav menu
-                                                //Since our nav menu size is dynamic, we cannot hard-code
-                                                //a value in here, we have to get the dynamic position on
-                                                //the screen
+const moveNavBar = (e) =>{
+    let navX = nav.getBoundingClientRect().left; 
 
-    let xPos = e.clientX - navX + 20;  //e = event, clientX = the X position of the cursor
-                                    //We subtract our current mouse X position from the position
-                                    //of the left side of our nav, this gives us a value of 0
-                                    //when our mouse is on the very left side of the nav
-                                    //We add 20px to adjust the position of the ball directly under the mouse
+    let xPos = e.clientX - navX + 20;  
     
     let navW = nav.offsetWidth;
 
-    let lowerLimit = navW * 0.1, upperLimit = navW * 0.9; //We are setting upper and lower limits of 90% and 10%
+    let lowerLimit = navW * 0.1, upperLimit = navW * 0.9; 
 
     if (xPos > lowerLimit && xPos < upperLimit) slider.style.left = xPos + "px"; 
+}
 
+nav.addEventListener("mousemove", moveNavBar);
+nav.addEventListener("touchmove", moveNavBar);
 
-})
 let slideIndex = 1;
 showSlides(slideIndex);
 

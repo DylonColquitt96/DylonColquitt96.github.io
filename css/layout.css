@@ -10,10 +10,6 @@ html{
     scroll-behavior: smooth;;
 }
 
-body{
-    overflow-x: hidden;
-    
-}
 
 section:not(:first-of-type){
     position: relative;
@@ -28,18 +24,13 @@ h3 {
     padding-bottom: 3vh;
 }
 
-section:not(:first-of-type):not(:last-of-type)::after { /* we don't want the first or the last section, we are targeting every one in between
-    ::after is like a fake div that you can place after the element (the section tags)
-    there is also a ::before pseudo-selector as well */
-content: ""; /* content is ALWAYS ALWAYS required for ::after and ::before, if not needed, just left empty with double quotes*/
-border: 15vh solid transparent; /* this is how we create the triangle, we set a border thickness (15vh) and make all borders transparent
-by default, this imaginary div has a 0 height and 0 width, so you can't see the div, only the border
-but the border for now is transparent so you can't see anything yet */
-position: absolute; /* next few lines just position the imaginary div to the bottom center of the section */
+section:not(:first-of-type):not(:last-of-type)::after { 
+border: 15vh solid transparent; 
+position: absolute; 
 left: 50%;
 top: 100%;
 transform: translate(-50%, 0);
-z-index: 100; /* keep it above the next section */
+z-index: 100;
 pointer-events: none;
 }
 
@@ -48,9 +39,11 @@ pointer-events: none;
 nav { 
     position: absolute;
     width: 38vw;
+    height: 5vh;
     right: 0; 
     z-index: 50; 
-    margin: 20px;
+    margin-top: 20px;
+    overflow-x: hidden;
   }
 
   ul { 
@@ -97,13 +90,13 @@ nav {
   nav .nav-line { 
     position: absolute;
     left: 50%;
-    bottom: -1vh;
+    bottom: 1vh;
     width: 40vw;
     
   }
   
 
-  nav .nav-circle { /* This is only for Nav2 */
+  nav .nav-circle { 
     position: absolute;
     left: -20px;
     top: -7px;
@@ -118,6 +111,7 @@ nav {
     position: inherit;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 
@@ -376,8 +370,8 @@ footer p{
 }
 
 @media only screen and (max-width: 600px){
-
-
+    
+    
     .flex-container{
         flex-direction: column;
     }

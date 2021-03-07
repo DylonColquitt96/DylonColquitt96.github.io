@@ -92,13 +92,7 @@ nav a{
 }
 
 .container-about::after {
-    border-top-color: #102EF4 !important; /* here we are coloring ONLY the top border. Imagine a div with a 0 height and width (basically
-                                        an invisible dot, then imagine drawing a border around that dot, there are 4 borders: top, right,
-                                        bottom, left. So imagine a square with a big X in the middle. it would be 4 triangles pointing
-                                        towards the center of the square. Each triangle represents a border (top, right, bottom, left).
-                                        We made all the borders transparent (invisible) and now we are adding color to only the top border.
-                                        so if you think about the square with the X, imagine the top triangle has color and the others are
-                                        invisible -- then you are left with just a single triangle point down */
+    border-top-color: #102EF4 !important; 
 }
 
 
