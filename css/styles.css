@@ -5,6 +5,9 @@
 nav a{
     color: #808080;
 }
+nav iframe{
+    color: #808080;
+}
 
 .nav-line{
     border-top: 1px solid white;
@@ -19,6 +22,10 @@ nav a{
   li:hover a {  
     color: white;
     
+}
+
+li:hover iframe{
+    color: white;
 }
 
 /*Home*/
@@ -89,6 +96,7 @@ nav a{
 .column-right{
     opacity: 0;
     transition: opacity 2s ease-in;
+    font-size: large;
 }
 
 .container-about::after {
@@ -101,7 +109,7 @@ nav a{
 
 .container-skill{
     background-image: linear-gradient(to bottom , black, #1060f4);
-    color: white;
+    color: #27c4c1;
 }
 .container-skill main p{
     font-size: 30px;

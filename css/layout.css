@@ -59,6 +59,18 @@ nav {
     text-decoration: none; 
     z-index: 80;
   }
+
+  .resume-page{
+    width: 800px;
+    height: 90vh;
+    top: 5vh;
+    display: none; 
+    position: fixed;
+    right: 350px;
+    z-index: 100;
+    transition: all 1s ease
+  }
+
   li { 
     position: relative; 
     text-align: center;
@@ -264,7 +276,7 @@ div {
 }
 
 img{
-    height: 65vh;
+    height: 60vh;
 }
 
 /* Skills */

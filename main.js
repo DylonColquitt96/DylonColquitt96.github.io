@@ -5,6 +5,8 @@ const innerInnerSquare = document.querySelector(".inner-inner-square");
 const p1 = document.querySelector("p:first-child");
 const p2 = document.querySelector("p:last-child");
 const columnRight = document.querySelector(".column-right");
+const resumeNav = document.querySelector(".resume-nav");
+const resumePage = document.querySelector(".resume-page");
 
 window.addEventListener("scroll", () => {
   let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -18,6 +20,16 @@ window.addEventListener("scroll", () => {
     resume.classList.remove("float");
   }
 });
+
+resumeNav.addEventListener("click", () =>{
+    let displaySetting = resumePage.style.display;
+    if(displaySetting == 'none'){
+        resumePage.style.display = 'block';
+    } else{
+        resumePage.style.display = 'none';
+    }
+    
+} )
 
 window.onload =() => {
     outerSquare.classList.add("rotate");
