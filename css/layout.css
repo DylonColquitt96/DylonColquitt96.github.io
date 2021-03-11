@@ -148,7 +148,7 @@ nav {
     pointer-events: all;
  }
  .iframe-container.visible, iframe.visible {
-    display: default;
+    display: block;
     height: 97%; 
  }
 
