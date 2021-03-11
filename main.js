@@ -8,7 +8,6 @@ const columnRight = document.querySelector(".column-right");
 const resumeNav = document.querySelector(".resume-nav");
 const iframeContainer = document.querySelector(".iframe-container");
 const iframe = document.querySelector("iframe");
-const iframeX = document.querySelector(".iframe-x")
 
 
 
@@ -30,6 +29,7 @@ window.onload =() => {
     setTimeout(() => {
         columnRight.style.opacity = "1";
     }, 2000);
+
 };
 
 let running = false;
@@ -100,14 +100,14 @@ showSlides(slideIndex);
 const toggleResume = () => {
     iframe.classList.toggle("visible");
     iframeContainer.classList.toggle("visible");
-    iframeX.classList.toggle("visible");
+    // iframeX.classList.toggle("visible");
 
-    // iframeX.classList.toggle("visible")
  }
 
 
  resumeNav.addEventListener("click", toggleResume);
- iframeX.addEventListener("click", toggleResume);
+ iframeContainer.addEventListener("click", toggleResume);
+//  iframeX.addEventListener("click", toggleResume);
 
 
 
@@ -132,4 +132,4 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-}
+};

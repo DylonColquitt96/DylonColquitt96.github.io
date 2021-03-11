@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
 
 
 html{
@@ -67,25 +67,25 @@ nav {
     text-align: center;
   }
 
-  li:nth-last-of-type(2),
-  li:nth-last-of-type(1) {
-    transition: all 1s ease;
-  }
-  li:nth-last-of-type(2).float,
-  li:nth-last-of-type(1).float {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0e2025;
-    border-radius: 50%;
-    z-index: 500;
-    font-size: 12pt;
-  }
+    li:nth-last-of-type(2),
+    li:nth-last-of-type(1) {
+        transition: all 1s ease;
+    }
+    li:nth-last-of-type(2).float,
+    li:nth-last-of-type(1).float {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0e2025;
+        border-radius: 50%;
+        z-index: 500;
+        font-size: 12pt;
+    }
   li:nth-last-of-type(1).float {
     bottom: 120px;
   }
@@ -109,57 +109,53 @@ nav {
 
 
 /* Resume */
- .iframe-container, .iframe-x, iframe {
+
+:is(.iframe-container, iframe) {
     height: 0;
-    width: 60vw; 
+    width: 60vw;
     transition: height 1s ease;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
- } 
+}
 
- .iframe-x::before {
+iframe:not(.visible) {
+    border: none;
+}
+
+.iframe-container.visible {
+    pointer-events: none;
+  }
+  
+  .iframe-container.visible::after {
     content: "X";
     border-radius: 50%;
     border: 1px solid black;
-    height: 20px;
-    width: 20px;
-    font-size: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 12pt;
     text-align: center;
-    line-height: 20px;
+    line-height: 30px;
     background-color: white;
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 0;
+    right: -15px;
     cursor: pointer;
     pointer-events: all;
- }
-
-iframe.no-display, .iframe-x{
-     display: none;
- }
-
- .iframe-container {
-    pointer-events: none;
-    
- }
- iframe {
+    z-index: 5000;
+  }
+  
+  iframe {
     pointer-events: all;
-    
-    
- }
+  }
 
- .iframe-container.visible, iframe.visible, .iframe-x.visible {
-    display: block;
-    height: 97%; 
- }
-
-
-
-
- 
+  :is(.iframe-container, iframe).visible {
+    height: 97%;
+    /* opacity: 1; */
+  }
+  
 
 
 /*Home*/
