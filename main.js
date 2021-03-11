@@ -8,6 +8,7 @@ const columnRight = document.querySelector(".column-right");
 const resumeNav = document.querySelector(".resume-nav");
 const iframeContainer = document.querySelector(".iframe-container");
 const iframe = document.querySelector("iframe");
+const iframeX = document.querySelector(".iframe-x")
 
 
 
@@ -99,11 +100,14 @@ showSlides(slideIndex);
 const toggleResume = () => {
     iframe.classList.toggle("visible");
     iframeContainer.classList.toggle("visible");
+    iframeX.classList.toggle("visible");
+
+    // iframeX.classList.toggle("visible")
  }
 
 
  resumeNav.addEventListener("click", toggleResume);
- iframeContainer.addEventListener("click", toggleResume);
+ iframeX.addEventListener("click", toggleResume);
 
 
 
