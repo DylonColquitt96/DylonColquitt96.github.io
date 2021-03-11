@@ -6,31 +6,13 @@ const p1 = document.querySelector("p:first-child");
 const p2 = document.querySelector("p:last-child");
 const columnRight = document.querySelector(".column-right");
 const resumeNav = document.querySelector(".resume-nav");
-const resumePage = document.querySelector(".resume-page");
+const iframeContainer = document.querySelector(".iframe-container");
+const iframe = document.querySelector("iframe");
 
-window.addEventListener("scroll", () => {
-  let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-  const email = document.querySelector("li:nth-last-of-type(2)");
-  const resume = document.querySelector("li:nth-last-of-type(1)");
-  if (scrollValue > 100) {
-    email.classList.add("float");
-    resume.classList.add("float");
-  } else  {
-    email.classList.remove("float");
-    resume.classList.remove("float");
-  }
-});
 
-resumeNav.addEventListener("click", () =>{
-    let displaySetting = resumePage.style.display;
-    if(displaySetting == 'none'){
-        resumePage.style.display = 'block';
-    } else{
-        resumePage.style.display = 'none';
-    }
-    
-} )
 
+
+// Main Page 
 window.onload =() => {
     outerSquare.classList.add("rotate");
     midSquare.classList.add("rotate");
@@ -76,6 +58,21 @@ innerInnerSquare.style.transform = "translate(-50%, -50%) scale(" + w / 1500 + "
 
 window.addEventListener("resize", adjustFont);
 
+// Nav Bar
+window.addEventListener("scroll", () => {
+    let scrollValue = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    const email = document.querySelector("li:nth-last-of-type(2)");
+    const resume = document.querySelector("li:nth-last-of-type(1)");
+    if (scrollValue > 100) {
+      email.classList.add("float");
+      resume.classList.add("float");
+    } else  {
+      email.classList.remove("float");
+      resume.classList.remove("float");
+    }
+  });
+  
+
 const nav = document.querySelector("nav");
 const slider = document.querySelector(".nav-line");
 
@@ -96,6 +93,21 @@ nav.addEventListener("touchmove", moveNavBar);
 
 let slideIndex = 1;
 showSlides(slideIndex);
+
+// Resume 
+
+const toggleResume = () => {
+    iframe.classList.toggle("visible");
+    iframeContainer.classList.toggle("visible");
+ }
+
+
+ resumeNav.addEventListener("click", toggleResume);
+ iframeContainer.addEventListener("click", toggleResume);
+
+
+
+
 
 // Thumbnail image controls
 function currentSlide(n) {

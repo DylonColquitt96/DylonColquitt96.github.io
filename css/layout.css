@@ -6,6 +6,7 @@
 }
 
 
+
 html{
     scroll-behavior: smooth;;
 }
@@ -60,17 +61,7 @@ nav {
     z-index: 80;
   }
 
-  .resume-page{
-    width: 800px;
-    height: 90vh;
-    top: 5vh;
-    display: none; 
-    position: fixed;
-    right: 350px;
-    z-index: 100;
-    transition: all 1s ease
-  }
-
+  
   li { 
     position: relative; 
     text-align: center;
@@ -115,6 +106,51 @@ nav {
     width: 14px;
     height: 14px;
   }
+
+
+/* Resume */
+ .iframe-container, iframe {
+    height: 0;
+    width: 60vw; 
+    transition: height 1s ease;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+ } 
+
+ .iframe-container {
+    pointer-events: none;
+    
+ }
+ iframe {
+    pointer-events: all;
+    
+    
+ }
+
+ .iframe-container::after {
+    content: "X";
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    pointer-events: all;
+ }
+ .iframe-container.visible, iframe.visible {
+    display: default;
+    height: 97%; 
+ }
 
 
 /*Home*/
