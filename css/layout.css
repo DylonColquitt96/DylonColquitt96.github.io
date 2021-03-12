@@ -153,7 +153,7 @@ iframe:not(.visible) {
 
   :is(.iframe-container, iframe).visible {
     height: 97%;
-    /* opacity: 1; */
+    
   }
   
 

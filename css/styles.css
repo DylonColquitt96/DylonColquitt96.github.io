@@ -108,7 +108,7 @@ li:hover iframe{
 
 
 .container-skill{
-    background-image: linear-gradient(to bottom , black, #1060f4);
+    background-image: linear-gradient(to bottom , black, #2056b9);
     color: #27c4c1;
 }
 .container-skill main p{
@@ -120,6 +120,7 @@ li:hover iframe{
 
 .container-skill main p:hover{
     font-size: 40px;
+    text-shadow: 2px 2px 7px rgb(209, 79, 248);
 }
 .container-skill::after{
     border-top-color: #1060f4 !important;
